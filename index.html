@@ -8,12 +8,18 @@
 <meta property="og:title" content="Anak Tangga Q — Satu anak tangga sehari.">
 <meta property="og:description" content="Media belajar anak 2–8 tahun dalam banyak format. Download, cetak, mulai. Tanpa paksaan.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://wahyudimas.github.io/anaktanggaq/images/og-image.png">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://wahyudimas.github.io/anaktanggaq/images/og-image.png">
+<meta name="theme-color" content="#FFF6E5">
+<link rel="canonical" href="https://wahyudimas.github.io/anaktanggaq/">
 <meta property="og:url" content="https://wahyudimas.github.io/anaktanggaq/">
 <link rel="icon" type="image/svg+xml" href="icon.svg">
 <link rel="apple-touch-icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,10 +34,12 @@
       </span>
       <span>Anak Tangga <b>Q</b></span>
     </a>
-    <nav aria-label="Navigasi utama">
+    <button class="menu-btn" aria-label="Buka menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <nav id="menu" aria-label="Navigasi utama">
       <a href="#lini">Produk</a>
       <a href="#cara">Cara pakai</a>
       <a href="#tentang">Tentang</a>
+      <a href="#faq">FAQ</a>
       <a class="nav-cta" href="#gratis">Gratis 10 lembar</a>
     </nav>
   </div>
@@ -50,10 +58,12 @@
         <a class="btn btn-primary" href="#gratis">Ambil 10 lembar gratis</a>
         <a class="btn btn-ghost" href="#lini">Lihat produknya</a>
       </div>
-      <p class="micro">Tanpa paksaan. Tanpa janji instan. Mulai dari satu lembar.</p>
+      <ul class="trust"><li>Usia 2–8 tahun</li><li>Tanpa paksaan</li><li>Langsung pakai</li></ul>
     </div>
     <div class="hero-art">
-      <img class="hero-photo" src="images/hero-flow.jpg" alt="Lembar aktivitas pra-menulis siap cetak untuk anak">
+      <img class="hero-photo" src="images/hero-flow.webp" width="1000" height="558" fetchpriority="high" alt="Lembar aktivitas pra-menulis siap cetak untuk anak">
+      <div class="float-chip c1"><b>10 menit</b><span>per sesi</span></div>
+      <div class="float-chip c2"><b>A4 hitam-putih</b><span>siap cetak</span></div>
     </div>
   </div>
   <div class="ticker" aria-hidden="true">
@@ -85,41 +95,59 @@
     <p class="section-lede">Nama brandnya tidak pernah berubah. Formatnya yang menyesuaikan kebutuhan anak di tiap tahap.</p>
     <div class="grid3">
       <article class="line-card">
-        <span class="badge">PLAY</span>
+        <span class="ico" aria-hidden="true">✏️</span><span class="badge">PLAY</span>
         <h3>Mulai dari tangan</h3>
         <p>Lembar aktivitas, latihan garis, angka, dan huruf. Cetak, lalu mulai.</p>
         <span class="age">Usia 2–6 tahun</span>
       </article>
       <article class="line-card">
-        <span class="badge">WATCH</span>
+        <span class="ico" aria-hidden="true">🎬</span><span class="badge">WATCH</span>
         <h3>Mulai dari lihat</h3>
         <p>Video pendek dan mini course. Orang tua menonton dulu, lalu memainkan bersama.</p>
         <span class="age">Usia 2–6 tahun</span>
       </article>
       <article class="line-card">
-        <span class="badge">READ</span>
+        <span class="ico" aria-hidden="true">📖</span><span class="badge">READ</span>
         <h3>Mulai dari cerita</h3>
         <p>Buku digital dan ebook panduan yang bisa dibaca di layar atau dicetak.</p>
         <span class="age">Usia 2–6 tahun</span>
       </article>
       <article class="line-card">
-        <span class="badge">CLASS</span>
+        <span class="ico" aria-hidden="true">💬</span><span class="badge">CLASS</span>
         <h3>Mulai dari tanya</h3>
         <p>Webinar untuk orang tua, dengan sesi tanya jawab dan rekaman yang bisa diulang.</p>
         <span class="age">Usia 5–6 tahun</span>
       </article>
       <article class="line-card">
-        <span class="badge">APP</span>
+        <span class="ico" aria-hidden="true">🎮</span><span class="badge">APP</span>
         <h3>Mulai dari main</h3>
         <p>Aplikasi dan game edukasi ringan, untuk menemani latihan tanpa layar berlebih.</p>
         <span class="age">Usia 3–8 tahun</span>
       </article>
       <article class="line-card">
-        <span class="badge">KIT</span>
+        <span class="ico" aria-hidden="true">🧩</span><span class="badge">KIT</span>
         <h3>Mulai dari benda</h3>
         <p>Alat peraga dan mainan edukatif yang bisa dipegang, dipindah, dan dicoba.</p>
         <span class="age">Usia 3–8 tahun</span>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="produk">
+  <div class="wrap">
+    <p class="kicker">Produk unggulan</p>
+    <h2>Mulai dari satu paket.</h2>
+    <div class="product">
+      <img src="images/anaktanggaq-produk-1.webp" width="800" height="800" loading="lazy" alt="Cover Paket Pra-Menulis untuk anak 3–4 tahun">
+      <div class="product-info">
+        <span class="badge">PLAY</span>
+        <h3>Paket Pra-Menulis</h3>
+        <p>30 halaman latihan bertahap untuk anak 3–4 tahun, dari garis dasar sampai bentuk. Dilengkapi bonus stiker dan sertifikat.</p>
+        <ul class="checks"><li>6 tingkat latihan bertahap</li><li>PDF A4, aman dicetak hitam-putih</li><li>Bonus stiker &amp; sertifikat</li></ul>
+        <div class="price"><b>Rp 29.000</b><span>sekali bayar, file langsung diunduh</span></div>
+        <a class="btn btn-primary" href="https://lynk.id/riezkygroup/p/ndkqrjrj58pd" target="_blank" rel="noopener">Beli Paket Pra-Menulis</a>
+      </div>
     </div>
   </div>
 </section>
@@ -203,7 +231,7 @@
     <h2>15 detik untuk tahu isi paketnya.</h2>
     <p class="section-lede">Video ini sengaja tanpa wajah karakter — fokus pada tangan, kertas, dan langkah kecil yang bisa langsung dicoba.</p>
     <div class="video-box">
-      <video controls playsinline poster="videos/promo-halal-thumb.jpg">
+      <video controls playsinline preload="none" width="1080" height="660" poster="videos/promo-halal-thumb.jpg">
         <source src="videos/promo-halal-15s.mp4" type="video/mp4">
         Browser kamu tidak mendukung video.
       </video>
@@ -216,8 +244,8 @@
     <p class="kicker">Pratinjau produk</p>
     <h2>Paket Pra-Menulis, sekilas.</h2>
     <div class="gallery">
-      <img src="images/anaktanggaq-produk-1.png" alt="Cover Paket Pra-Menulis untuk anak 3–4 tahun">
-      <img src="images/anaktanggaq-produk-2.png" alt="Ringkasan 6 tingkat latihan dalam Paket Pra-Menulis">
+      <img src="images/anaktanggaq-produk-1.webp" width="800" height="800" loading="lazy" alt="Cover Paket Pra-Menulis untuk anak 3–4 tahun">
+      <img src="images/anaktanggaq-produk-2.webp" width="800" height="800" loading="lazy" alt="Ringkasan 6 tingkat latihan dalam Paket Pra-Menulis">
     </div>
   </div>
 </section>
