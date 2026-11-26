@@ -25,18 +25,30 @@
 
   // ---------- penyimpanan ----------
   const KEY = "atq_game_v1";
-  function fresh() { return { v: 1, profiles: [], current: null, settings: { sound: true, voice: true, free: false }, unlocked: { cal: false, pet: false } }; }
-  function load() { try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && s.profiles) return s; } catch (e) {} return fresh(); }
+  function fresh() { return { v: 1, profiles: [], current: null, settings: { sound: true, voice: true, free: false }, unlocked: { cal: false, pet: false, hij: false } }; }
+  const freshProg = () => ({ cal: { d: {}, last: "" }, hij: { d: {}, last: "" }, pet: { d: {}, last: "" }, lat: {} });
+  function migrate(s) {
+    s.unlocked = Object.assign({ cal: false, pet: false, hij: false }, s.unlocked || {});
+    s.settings = Object.assign({ sound: true, voice: true, free: false }, s.settings || {});
+    s.profiles.forEach((p) => { p.prog = Object.assign(freshProg(), p.prog || {}); p.dates = p.dates || []; p.routine = p.routine || {}; });
+    return s;
+  }
+  G.freshProg = freshProg;
+  function load() { try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && s.profiles) return migrate(s); } catch (e) {} return fresh(); }
   G.state = load();
   G.save = () => { try { localStorage.setItem(KEY, JSON.stringify(G.state)); } catch (e) {} };
   G.profile = () => G.state.profiles.find((p) => p.id === G.state.current) || null;
   G.addProfile = (name, avatar) => {
-    const p = { id: "p" + Date.now() + G.rnd(999), name, avatar, prog: { cal: { d: {}, last: "" }, pet: { d: {}, last: "" } }, dates: [] };
+    const p = { id: "p" + Date.now() + G.rnd(999), name, avatar, prog: freshProg(), dates: [], routine: {} };
     G.state.profiles.push(p); G.state.current = p.id; G.save(); return p;
   };
   G.done = (track, n) => (G.profile().prog[track].d[n] || null);
   G.doneCount = (track) => Object.keys(G.profile().prog[track].d).length;
-  G.totalStars = () => { const p = G.profile(); let s = 0; ["cal", "pet"].forEach((t) => Object.values(p.prog[t].d).forEach((x) => (s += x.stars))); return s; };
+  G.totalStars = () => { const p = G.profile(); let s = 0; ["cal", "hij", "pet"].forEach((t) => Object.values(p.prog[t].d).forEach((x) => (s += x.stars))); Object.values(p.prog.lat).forEach((sk) => Object.values(sk).forEach((v) => (s += v))); return s; };
+  G.touchToday = () => { const p = G.profile(); if (!p.dates.includes(G.today())) p.dates.push(G.today()); G.save(); };
+  G.latStars = (sk, n) => ((G.profile().prog.lat[sk] || {})[n] || 0);
+  G.latDone = (sk) => Object.keys(G.profile().prog.lat[sk] || {}).length;
+  G.markLat = (sk, n, stars) => { const L = (G.profile().prog.lat[sk] = G.profile().prog.lat[sk] || {}); L[n] = Math.max(stars, L[n] || 0); G.touchToday(); };
   G.streak = () => {
     const ds = new Set(G.profile().dates); let n = 0; const d = new Date();
     if (!ds.has(G.today())) d.setDate(d.getDate() - 1);
@@ -78,12 +90,13 @@
   G.tryCode = (code) => {
     const hh = G.hashCode(code), hit = window.GAME_CONFIG.codes.find((c) => c.h === hh);
     if (!hit) return null;
-    if (hit.scope === "all" || hit.scope === "cal") G.state.unlocked.cal = true;
-    if (hit.scope === "all" || hit.scope === "pet") G.state.unlocked.pet = true;
+    (G.SCOPES[hit.scope] || []).forEach((t) => (G.state.unlocked[t] = true));
     G.save(); return hit.scope;
   };
+  G.SCOPES = { cal: ["cal"], pet: ["pet"], hij: ["hij"], hemat: ["cal", "pet"], all: ["cal", "pet", "hij"] };
   G.isUnlocked = (track) => G.state.unlocked[track] || G.fast;
-  G.dayOpen = (track, n) => G.isUnlocked(track) || n <= window.GAME_CONFIG.freeDays[track];
+  G.dayOpen = (track, n) => G.isUnlocked(track) || n <= (window.GAME_CONFIG.freeDays[track] || 0);
+  G.levelOpen = (sk, n) => G.isUnlocked(C.skill(sk).track) || n <= window.GAME_CONFIG.freeLevels;
 
   // ---------- suara ----------
   let ac;

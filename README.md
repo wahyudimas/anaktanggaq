@@ -37,25 +37,35 @@ Kalau domain `anaktanggaq.com` sudah aktif:
 
 ## Game belajar (`game/`)
 
-Game edukasi statis, jalan di browser (HP/tablet/desktop), tanpa server.
+Game edukasi statis, jalan di browser (HP/tablet/desktop), tanpa server, bisa offline setelah dibuka sekali.
 
+Isi:
+- **Tangga harian:** Calistung 30 hari, Hijaiyah 30 hari (28 huruf + ulangan + kelulusan), Petualangan 60 hari (6 dunia)
+- **Taman Latihan:** 7 keterampilan (Huruf A–Z, Membaca, Angka, Berhitung, Hijaiyah, Logika, Warna & Bentuk) × 12 level
+- **Papan Rutinitas:** kegiatan pagi & malam yang dicentang anak setiap hari
+- 30+ jenis aktivitas, 120 stiker, sertifikat cetak, hingga 4 profil anak, area orang tua
+
+File:
 - `game/index.html` — halaman game
-- `game/content.js` — data kata, dunia, dan rencana 30 hari Calistung + 60 hari Petualangan
-- `game/acts.js` — 19 jenis aktivitas (tebak huruf, tebalkan dengan jari, labirin, titik, sudoku bentuk, dll.)
-- `game/app.js` — layar: profil, peta tangga, bermain, hadiah, album stiker, sertifikat, area orang tua
-- `game/core.js` — penyimpanan (localStorage), suara, maskot, efek
-- `game/config.js` — hari gratis, tautan toko, daftar hash kode akses
+- `game/content.js` — data kata, huruf hijaiyah, dunia, rencana harian, level latihan, rutinitas
+- `game/acts.js`, `game/acts2.js` — aktivitas interaktif
+- `game/app.js` — layar dan alur
+- `game/core.js` — penyimpanan (localStorage), suara, maskot, efek, kode akses
+- `game/config.js` — hari/level gratis, tautan toko, daftar hash kode akses
+- `game/fonts/` — font yang disimpan sendiri (lisensi OFL)
 - `tools/make-codes.js` — pembuat kode akses
 
 ### Kode akses
 
 ```sh
-node tools/make-codes.js all 20   # paket hemat (semua)
-node tools/make-codes.js cal 20   # hanya Calistung
-node tools/make-codes.js pet 20   # hanya Petualangan
+node tools/make-codes.js all 20     # Paket Lengkap: Calistung + Hijaiyah + Petualangan
+node tools/make-codes.js hemat 20   # Paket Hemat: Calistung + Petualangan
+node tools/make-codes.js cal 20     # Calistung saja
+node tools/make-codes.js hij 20     # Hijaiyah saja
+node tools/make-codes.js pet 20     # Petualangan saja
 ```
 
-Kode ditampilkan di terminal untuk dikirim ke pembeli. Tempel baris `{ h: "...", scope: "..." }` ke `codes` di `game/config.js`. Hanya hash yang disimpan di repo.
+Kode ditampilkan di terminal untuk dikirim ke pembeli. Tempel baris `{ h: "...", scope: "..." }` ke `codes` di `game/config.js`. Hanya hash yang disimpan di repo. Kode membuka tangga harian sekaligus level Taman Latihan yang terkait.
 
 > **Catatan keamanan:** karena situs ini statis dan repo publik, pembatas kode hanya mengunci tampilan. Orang yang paham teknis tetap bisa membuka semua hari lewat kode sumber, dan satu kode bisa dibagikan ke banyak orang. Untuk perlindungan sungguhan, pindahkan game ke hosting dengan login/pembayaran.
 

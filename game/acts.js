@@ -2,6 +2,7 @@
 (function () {
   const { h, rnd, shuffle, pick, wait } = G;
   const A = (G.acts = {});
+  G._r = {};
   const NS = "http://www.w3.org/2000/svg";
 
   // ---------- pembantu: ronde pilihan ----------
@@ -19,7 +20,7 @@
         b.onclick = async () => {
           if (lock || b.disabled) return;
           if (o.ok) {
-            lock = true; b.classList.add("good"); ctx.ok(); await wait(950);
+            lock = true; b.classList.add("good"); ctx.ok(); if (q.after) setTimeout(() => G.say(q.after), 350); await wait(950);
             i++; if (i >= qs.length) ctx.done(errors); else show();
           } else { errors++; b.disabled = true; b.classList.add("bad", "shake"); ctx.bad(); }
         };
@@ -75,13 +76,13 @@
 
   // ---------- Hitung benda (pilih angka) ----------
   function itemsBox(n, emoji) {
-    return h("div", { class: "items" }, Array.from({ length: n }, (_, k) => h("span", { style: { animationDelay: k * 0.05 + "s" } }, emoji)));
+    return h("div", { class: "items" + (n > 10 ? " many" : "") }, Array.from({ length: n }, (_, k) => h("span", { style: { animationDelay: k * 0.05 + "s" } }, emoji)));
   }
   A.hitung = (ctx) => {
     const n = ctx.p.n, em = pick(["🍎", "⭐", "🐟", "🎈", "🐥", "🍓", "🚗", "🌸"], 3);
-    const vals = [n, G.clamp(n + (n < 6 ? 1 : -1), 1, 10), n];
+    const R = ctx.p.range; const vals = R ? [0, 1, 2].map(() => R[0] + rnd(R[1] - R[0] + 1)) : [n, G.clamp(n + (n < 6 ? 1 : -1), 1, 10), n];
     const qs = vals.map((v, k) => {
-      const wrong = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10].filter((x) => x !== v && Math.abs(x - v) <= 3)).slice(0, 2);
+      const wrong = shuffle(Array.from({ length: 20 }, (_, k) => k + 1).filter((x) => x !== v && Math.abs(x - v) <= 3)).slice(0, 2);
       return {
         prompt: "Ada berapa?", say: "Ada berapa " + (k === 0 ? "benda" : "gambar") + " ini?",
         stage: itemsBox(v, em[k]), optCls: "num",
@@ -212,7 +213,7 @@
       const m = mx.getImageData(0, 0, S, S).data, d = ix.getImageData(0, 0, S, S).data, rr = rx.getImageData(0, 0, S, S).data;
       let mt = 0, cov = 0, it = 0;
       for (let k = 3; k < m.length; k += 4) { const on = m[k] > 128; if (on) { mt++; if (rr[k] > 20) cov++; } if (d[k] > 20) it++; }
-      return [cov / mt, it / mt];
+      return mt ? [cov / mt, it / mt] : [1, 0];
     }
     function check() {
       const [cv, over] = coverage();
@@ -227,21 +228,34 @@
     };
   }
 
-  A.trace = (ctx) => {
-    const t = ctx.p.text, many = t.length > 1;
-    const size = many ? 210 : 270;
-    const font = `800 ${size}px "Baloo 2", Nunito, Arial, sans-serif`;
-    const draw = (x, S, f) => { x.font = font; x.textAlign = "center"; x.textBaseline = "alphabetic"; f(x, S / 2, S * (many ? 0.7 : 0.74)); };
-    ctx.prompt("Tebalkan " + (ctx.p.kind === "angka" ? "angka " : "huruf ") + t, "Tebalkan " + (ctx.p.kind === "angka" ? "angka " : "huruf ") + t.toLowerCase() + " dengan jarimu");
-    (document.fonts && document.fonts.load ? document.fonts.load(font, t) : Promise.resolve()).catch(() => {}).then(() => {
+  // gambar teks di tengah kanvas, ukuran menyesuaikan bentuk hurufnya
+  function fitText(x, S, t, family, fill) {
+    x.font = "800 200px " + family; x.textAlign = "left"; x.textBaseline = "alphabetic";
+    let m = x.measureText(t), w = (m.actualBoundingBoxLeft + m.actualBoundingBoxRight) || 120, hh = (m.actualBoundingBoxAscent + m.actualBoundingBoxDescent) || 140;
+    const k = Math.min((S * 0.72) / w, (S * 0.72) / hh, 1.6), size = Math.round(200 * k);
+    x.font = "800 " + size + "px " + family; m = x.measureText(t);
+    const L = m.actualBoundingBoxLeft, R = m.actualBoundingBoxRight, A = m.actualBoundingBoxAscent, D = m.actualBoundingBoxDescent;
+    const px = S / 2 - (R - L) / 2, py = S / 2 + (A - D) / 2;
+    fill(x, px, py, size);
+  }
+  function traceText(ctx, t, family, say) {
+    ctx.prompt(say[0], say[1]);
+    const ready = document.fonts && document.fonts.load ? document.fonts.load("800 200px " + family, t) : Promise.resolve();
+    ready.catch(() => {}).then(() => {
       tracer(ctx, {
         need: 0.85, over: 3.2, reach: 66,
-        mask: (x, S) => { x.fillStyle = "#000"; draw(x, S, (c, cx, cy) => c.fillText(t, cx, cy)); },
-        guide: (x, S) => {
-          draw(x, S, (c, cx, cy) => { c.fillStyle = "#FFF1CF"; c.fillText(t, cx, cy); c.setLineDash([2, 14]); c.lineWidth = 5; c.lineCap = "round"; c.strokeStyle = "#1B2A4A"; c.strokeText(t, cx, cy); });
-        }
+        mask: (x, S) => fitText(x, S, t, family, (c, px, py, size) => { c.fillStyle = "#000"; c.strokeStyle = "#000"; c.lineWidth = Math.max(6, size * 0.05); c.lineJoin = "round"; c.fillText(t, px, py); c.strokeText(t, px, py); }),
+        guide: (x, S) => fitText(x, S, t, family, (c, px, py, size) => {
+          c.fillStyle = "#FFF1CF"; c.strokeStyle = "#FFF1CF"; c.lineWidth = Math.max(6, size * 0.05); c.lineJoin = "round"; c.fillText(t, px, py); c.strokeText(t, px, py);
+          c.setLineDash([2, 13]); c.lineWidth = 4.5; c.lineCap = "round"; c.strokeStyle = "#1B2A4A"; c.strokeText(t, px, py); c.setLineDash([]);
+        })
       });
     });
+  }
+  G._r.traceText = traceText;
+  A.trace = (ctx) => {
+    const t = ctx.p.text, what = (ctx.p.kind === "angka" ? "angka " : "huruf ");
+    traceText(ctx, t, '"Baloo 2", Nunito, Arial, sans-serif', ["Tebalkan " + what + t, "Tebalkan " + what + t.toLowerCase() + " dengan jarimu"]);
   };
 
   // ---------- Jejak garis ----------
@@ -297,7 +311,7 @@
       if (r2 === r + 1 && c2 === c) return !M.wallB[r][c]; if (r2 === r - 1 && c2 === c) return !M.wallB[r2][c2];
       if (c2 === c + 1 && r2 === r) return !M.wallR[r][c]; if (c2 === c - 1 && r2 === r) return !M.wallR[r2][c2]; return false;
     };
-    ctx.prompt("Antar " + ctx.p.world.char + " ke bintang!", "Bantu antar " + "ke bintang. Geser jarimu melewati jalan");
+    ctx.prompt("Antar " + ctx.p.world.char + " ke bintang!", "Bantu temanmu sampai ke bintang. Geser jarimu melewati jalan");
     const grid = h("div", { class: "maze", style: { width: cell * n + "px", height: cell * n + "px", gridTemplateColumns: `repeat(${n},${cell}px)`, gridTemplateRows: `repeat(${n},${cell}px)`, fontSize: cell * 0.6 + "px" } });
     const cells = [];
     for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) {
@@ -474,4 +488,5 @@
     });
     rounds(ctx, qs);
   };
+  Object.assign(G._r, { rounds, opt, big, itemsBox, pickCount, tracer });
 })();

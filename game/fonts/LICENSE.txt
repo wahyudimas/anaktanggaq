@@ -1,0 +1,5 @@
+Font di folder ini berlisensi SIL Open Font License 1.1 (OFL), diambil dari paket @fontsource:
+- Baloo 2 (Ek Type)
+- Nunito (Vernon Adams, Cyreal, Jacques Le Bailly)
+- Noto Naskh Arabic (Google)
+Teks lisensi lengkap: https://openfontlicense.org
