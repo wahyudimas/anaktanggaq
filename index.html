@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anak Tangga Q — Satu anak tangga sehari.</title>
-<meta name="description" content="Rumah belajar anak 3–6 tahun. Lembar kerja Calistung, Hijaiyah, petualangan logika, dan kit rutinitas. Langsung download dan cetak — satu anak tangga sehari.">
+<meta name="description" content="Lembar kerja anak sesuai kesiapan, bukan umur: tarik garis, calistung, hijaiyah, petualangan logika, dan kit rutinitas. Intip isinya, ambil yang gratis, cetak sendiri di rumah.">
 <meta property="og:title" content="Anak Tangga Q — Satu anak tangga sehari.">
-<meta property="og:description" content="Lembar kerja anak 3–6 tahun: Calistung 30 Hari, Hijaiyah 30 Hari, Petualangan 60 Hari, dan Kit Rutinitas. Download, cetak, mulai.">
+<meta property="og:description" content="Belajar sesuai kesiapan anak: Level 1 tarik garis, Level 2 kenal huruf, Level 3 baca dan tulis kata. Ambil 10 lembar gratisnya.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://wahyudimas.github.io/anaktanggaq/images/og-image.png">
 <meta property="og:locale" content="id_ID">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://wahyudimas.github.io/anaktanggaq/images/og-image.png">
-<meta name="theme-color" content="#FFF6E5">
+<meta name="theme-color" content="#FFF8EC">
 <link rel="canonical" href="https://wahyudimas.github.io/anaktanggaq/">
 <meta property="og:url" content="https://wahyudimas.github.io/anaktanggaq/">
 <link rel="icon" type="image/svg+xml" href="icon.svg">
@@ -23,23 +23,20 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <a class="skip" href="#main">Lewati ke konten</a>
 
 <header class="nav">
   <div class="wrap nav-in">
     <a class="brand" href="#top" aria-label="Anak Tangga Q, kembali ke atas">
-      <span class="brand-mark" aria-hidden="true">
-        <span class="step s3"></span><span class="step s2"></span><span class="step s1"></span><span class="q">Q</span>
-      </span>
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
       <span>Anak Tangga <b>Q</b></span>
     </a>
     <button class="menu-btn" aria-label="Buka menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     <nav id="menu" aria-label="Navigasi utama">
+      <a href="#level">Pilih level</a>
+      <a href="#intip">Intip isi</a>
       <a href="#produk">Produk</a>
-      <a href="#cara">Cara pakai</a>
       <a href="game/index.html">Main game</a>
-      <a href="#tentang">Tentang</a>
       <a href="#faq">FAQ</a>
       <a class="nav-cta" href="#gratis">Coba gratis</a>
     </nav>
@@ -51,239 +48,287 @@
 <section class="hero" id="top">
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <p class="eyebrow">Rumah belajar anak 3–6 tahun</p>
-      <h1>Satu anak tangga <em>sehari.</em></h1>
-      <p class="lede">Anak tidak butuh lebih banyak materi. Anak butuh satu langkah kecil yang bisa diselesaikan hari ini.</p>
-      <p class="hero-sub">Lembar kerja Calistung, Hijaiyah, dan petualangan logika, plus kit rutinitas harian. Cukup 10–15 menit sehari, bisa dipakai begitu selesai diunduh.</p>
+      <h1><span>Satu</span><span>anak tangga</span><span>sehari.</span></h1>
+      <p class="lede">Anak tidak butuh lebih banyak materi. Ia butuh satu langkah kecil yang bisa selesai hari ini.</p>
+      <p class="sub">Lembar kerja siap cetak yang dipilih sesuai kesiapan, bukan umur. Cukup 10–15 menit sehari, bisa dipakai begitu selesai diunduh.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="#gratis">Ambil 10 lembar gratis</a>
-        <a class="btn btn-ghost" href="#produk">Lihat produknya</a>
+        <a class="btn primary" href="#gratis">Ambil 10 lembar gratis</a>
+        <a class="btn" href="#intip">Intip isinya</a>
       </div>
-      <ul class="trust"><li>Usia 3–6 tahun</li><li>Tanpa paksaan</li><li>Langsung pakai</li></ul>
+      <ul class="trust"><li>Sesuai kesiapan</li><li>Tanpa paksaan</li><li>PDF A4 siap cetak</li></ul>
     </div>
-    <div class="hero-art">
-      <img class="hero-photo" src="images/hero-flow.webp" width="1000" height="558" fetchpriority="high" alt="Lembar aktivitas pra-menulis siap cetak untuk anak">
-      <div class="float-chip c1"><b>10–15 menit</b><span>per hari</span></div>
-      <div class="float-chip c2"><b>PDF A4</b><span>siap cetak</span></div>
+    <div class="stair" aria-label="Tiga level kesiapan, dari bawah ke atas">
+      <div class="stair-step"><div class="sheet"><img src="images/intip/pra-4.webp" width="662" height="936" fetchpriority="high" alt="Contoh lembar Level 1: garis mendatar, kereta pulang ke rumah"></div><div class="block">Level 1<small>baru belajar tarik garis</small></div></div>
+      <div class="stair-step"><div class="sheet"><img src="images/intip/cal-7.webp" width="662" height="936" fetchpriority="high" alt="Contoh lembar Level 2: huruf A a bergambar ayam"></div><div class="block">Level 2<small>sudah kenal huruf</small></div></div>
+      <div class="stair-step"><div class="sheet"><img src="images/intip/cal-82.webp" width="662" height="936" fetchpriority="high" alt="Contoh lembar Level 3: membaca kata bebek, kuda, sapi"></div><div class="block">Level 3<small>mulai baca dan tulis kata</small></div></div>
     </div>
   </div>
-  <div class="ticker"><span>MULAI GRATIS</span><i></i><span>CALISTUNG · HIJAIYAH · LOGIKA</span><i></i><span>251 HALAMAN PAKET LENGKAP</span><i></i><span>USIA 3–6 TAHUN</span></div>
 </section>
 
+<div class="marquee" aria-hidden="true"><div class="marquee-track">
+  <span>Tarik garis</span><span>Calistung</span><span>Hijaiyah dengan Latin dan arti</span><span>Petualangan logika</span><span>Kit rutinitas</span><span>350 halaman paket lengkap</span>
+  <span>Tarik garis</span><span>Calistung</span><span>Hijaiyah dengan Latin dan arti</span><span>Petualangan logika</span><span>Kit rutinitas</span><span>350 halaman paket lengkap</span>
+</div></div>
+
 <section class="section" id="masalah">
-  <div class="wrap narrow">
-    <p class="kicker">Kenapa ini ada</p>
-    <h2>Kadang yang bikin anak menolak bukan materinya. Caranya.</h2>
-    <div class="duo">
-      <div class="card soft">
-        <h3>Yang sering terjadi</h3>
-        <p>Buku tebal dibeli. Jadwal disusun. Anak duduk, lalu menangis. Orang tua pulang dengan rasa bersalah.</p>
-      </div>
-      <div class="card soft accent">
-        <h3>Yang kami ubah</h3>
-        <p>Satu lembar. Sepuluh menit. Anak yang memilih. Berhenti sebelum bosan, lanjut besoknya.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section cream" id="produk">
   <div class="wrap">
-    <p class="kicker">Produk</p>
-    <h2>Mulai gratis, lanjut sesuai kebutuhan.</h2>
-    <p class="section-lede">Semua berupa PDF A4 yang langsung diunduh setelah bayar dan boleh dicetak berulang untuk keluarga sendiri.</p>
-    <nav class="needs" aria-label="Pilih sesuai kebutuhan">
-      <a href="#p-rutinitas">🌅 Pagi sering berantakan</a>
-      <a href="#p-calistung">✏️ Baca, tulis, hitung</a>
-      <a href="#p-hijaiyah">🕌 Kenalan hijaiyah</a>
-      <a href="#p-petualangan">🧩 Logika &amp; motorik</a>
-      <a href="#p-paket">💰 Mau lebih hemat</a>
-    </nav>
-    <div class="offers">
-      <article class="offer best" id="p-paket">
-        <span class="ribbon">Paling lengkap</span>
-        <span class="offer-ico" aria-hidden="true">🎁</span><span class="badge">PAKET LENGKAP</span>
-        <h3>Calistung + Hijaiyah + Petualangan</h3>
-        <p>Tiga program dalam satu paket, 251 halaman: Tangga Calistung 30 Hari, Tangga Hijaiyah 30 Hari, dan Petualangan Tangga 60 Hari.</p>
-        <ul class="checks"><li>Baca, tulis, hitung, huruf hijaiyah, dan logika</li><li>Usia 3–6 tahun, satu tangga setiap hari</li><li>Beli terpisah Rp 117.000, di paket ini hemat Rp 18.000</li></ul>
-        <div class="price"><s>Rp 150.000</s><b>Rp 99.000</b></div>
-        <a class="btn btn-primary" href="https://lynk.id/riezkygroup/we952xv50ke8" target="_blank" rel="noopener">Ambil Paket Lengkap</a>
-      </article>
-      <article class="offer duo">
-        <span class="offer-ico" aria-hidden="true">💰</span><span class="badge">PAKET HEMAT</span>
-        <h3>Calistung + Petualangan</h3>
-        <p class="age">106 halaman · usia 3–6 tahun</p>
-        <p>Dua program tanpa Hijaiyah. Saran pakai: 1 lembar Calistung + 1 lembar Petualangan per hari. Beli terpisah Rp 78.000, hemat Rp 9.000.</p>
-        <div class="price"><s>Rp 158.000</s><b>Rp 69.000</b></div>
-        <a class="btn btn-ghost" href="https://lynk.id/riezkygroup/el872722048g" target="_blank" rel="noopener">Ambil Paket Hemat</a>
-      </article>
-      <article class="offer" id="p-calistung">
-        <span class="offer-ico" aria-hidden="true">✏️</span><span class="badge">CALISTUNG</span>
-        <h3>Tangga Calistung 30 Hari</h3>
-        <p class="age">Baca, tulis, hitung · usia 4–6 tahun</p>
-        <p>34 halaman: huruf, angka 1–10, suku kata, sampai penjumlahan bergambar. Bonus Panduan Ayah/Bunda, Peta Tangga-ku, dan sertifikat.</p>
-        <div class="price"><s>Rp 59.000</s><b>Rp 29.000</b></div>
-        <a class="btn btn-ghost" href="https://lynk.id/riezkygroup/j68l4xrxqyed" target="_blank" rel="noopener">Lihat Calistung</a>
-      </article>
-      <article class="offer" id="p-hijaiyah">
-        <span class="offer-ico" aria-hidden="true">🕌</span><span class="badge">HIJAIYAH</span>
-        <h3>Tangga Hijaiyah 30 Hari</h3>
-        <p class="age">Kenalan huruf hijaiyah · usia 3–6 tahun</p>
-        <p>146 halaman, 28 huruf satu per satu. Tiap huruf: kenali, menebal, kata contoh, harakat (fathah, kasrah, dhammah), dan main. Hari 30 sertifikat kelulusan.</p>
-        <div class="price"><b>Rp 39.000</b></div>
-        <a class="btn btn-ghost" href="https://lynk.id/riezkygroup/dm8j51r3wp5z" target="_blank" rel="noopener">Lihat Hijaiyah</a>
-      </article>
-      <article class="offer" id="p-petualangan">
-        <span class="offer-ico" aria-hidden="true">🧩</span><span class="badge">PETUALANGAN</span>
-        <h3>Petualangan Tangga 60 Hari</h3>
-        <p class="age">Logika &amp; motorik · usia 3–6 tahun</p>
-        <p>71 halaman, 6 dunia petualangan: labirin, jejak garis, pola, hubungkan titik, sudoku bentuk, dan cermin ajaib. Melatih fokus tanpa gadget.</p>
-        <div class="price"><s>Rp 99.000</s><b>Rp 49.000</b></div>
-        <a class="btn btn-ghost" href="https://lynk.id/riezkygroup/xpmzn44k5ypd" target="_blank" rel="noopener">Lihat Petualangan</a>
-      </article>
-      <article class="offer" id="p-rutinitas">
-        <span class="offer-ico" aria-hidden="true">🌅</span><span class="badge">RUTINITAS</span>
-        <h3>Kit Rutinitas Si Kecil</h3>
-        <p class="age">Papan &amp; kartu kegiatan · usia 3–6 tahun</p>
-        <p>35 halaman: papan pagi, siang, malam, dan akhir pekan, 30 kartu kegiatan, Tangga Hebat, kartu perasaan, pelacak 30 hari, dan panduan orang tua.</p>
-        <div class="price"><b>Rp 19.000</b></div>
-        <a class="btn btn-ghost" href="https://lynk.id/riezkygroup/j37yrqd033k9" target="_blank" rel="noopener">Lihat Kit Rutinitas</a>
-      </article>
+    <h2>Kadang yang bikin anak menolak bukan materinya. Caranya.</h2>
+    <div class="contrast">
+      <article class="was"><h3>Yang sering terjadi</h3><p>Buku tebal dibeli. Jadwal disusun. Anak duduk, lalu menangis. Orang tua pulang dengan rasa bersalah.</p></article>
+      <article class="now"><h3>Yang kami ubah</h3><p>Satu lembar. Sepuluh menit. Anak yang memilih. Berhenti sebelum bosan, lanjut besoknya.</p></article>
     </div>
-    <p class="micro center">Belum yakin? <a class="sample-link" href="#gratis">Coba yang gratis dulu →</a></p>
   </div>
 </section>
-<section class="section" id="cara">
-  <div class="wrap narrow">
-    <p class="kicker">Cara pakainya</p>
-    <h2>Tiga langkah. Selesai.</h2>
+
+<section class="section paper-2" id="level">
+  <div class="wrap">
+    <div class="head">
+      <h2>Mulai dari anak tangga yang pas.</h2>
+      <p class="lede-2">Anak seumur sama bisa sangat berbeda kesiapannya. Lihat apa yang sudah bisa ia lakukan hari ini, lalu pilih levelnya. Naik kalau sudah siap, bukan karena umurnya.</p>
+    </div>
+    <div class="levels">
+      <a class="level" href="#p-pramenulis"><span class="tag">Level 1</span><h3>Baru belajar tarik garis</h3><p>Tangan masih belajar memegang pensil. Mulai dari garis, lengkung, dan lingkaran.</p><b>Mulai dengan Pra-Menulis</b></a>
+      <a class="level" href="#p-calistung"><span class="tag">Level 2</span><h3>Sudah kenal huruf</h3><p>Sudah mau menebalkan huruf dan mengenal bunyinya. Satu huruf bergambar sehari.</p><b>Mulai dengan Calistung</b></a>
+      <a class="level" href="#p-calistung"><span class="tag">Level 3</span><h3>Mulai baca dan tulis kata</h3><p>Sudah bisa membaca suku kata dan menulis banyak huruf. Pilih jalur Normal.</p><b>Mulai dengan Calistung</b></a>
+    </div>
+    <p class="levels-note">Masih ragu? <a href="#gratis">Tes 2 menit ada di 10 Lembar Gratis.</a></p>
+  </div>
+</section>
+
+<section class="section intip" id="intip">
+  <div class="wrap">
+    <h2>Intip isinya dulu.</h2>
+    <p class="lede-2">Ini halaman asli dari produknya, bukan ilustrasi. Klik halaman untuk memperbesar, geser untuk melihat yang lain.</p>
+    <div class="tabs" role="tablist" aria-label="Pilih produk"><button class="tab" role="tab" id="tab-pra" aria-controls="pn-pra" aria-selected="true" type="button">Pra-Menulis</button><button class="tab" role="tab" id="tab-cal" aria-controls="pn-cal" aria-selected="false" type="button">Calistung</button><button class="tab" role="tab" id="tab-hij" aria-controls="pn-hij" aria-selected="false" type="button">Hijaiyah</button><button class="tab" role="tab" id="tab-pet" aria-controls="pn-pet" aria-selected="false" type="button">Petualangan</button><button class="tab" role="tab" id="tab-kit" aria-controls="pn-kit" aria-selected="false" type="button">Kit Rutinitas</button><button class="tab" role="tab" id="tab-grt" aria-controls="pn-grt" aria-selected="false" type="button">Gratis</button></div>
+    <div class="panel" role="tabpanel" id="pn-pra" aria-labelledby="tab-pra">
+      <div class="panel-head">
+        <p><strong>Pra-Menulis</strong> · Level 1 · 45 halaman<br>Untuk tangan yang baru belajar memegang pensil. Garis lurus dulu, lalu lengkung, lingkaran, bentuk, dan jalan berkelok. Tiap garis punya tujuan kecil: kereta pulang ke rumah, siput menuju bunga.</p>
+        <a class="btn primary small" href="https://lynk.id/riezkygroup/08l56n5mw78l" target="_blank" rel="noopener">Beli Pra-Menulis · Rp 15.000</a>
+      </div>
+      <div class="pages" tabindex="0" aria-label="Contoh halaman Pra-Menulis">
+<button class="pg" type="button" data-cap="Garis mendatar: kereta pulang ke rumah"><figure><img src="images/intip/pra-4.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Garis mendatar: kereta pulang ke rumah"><figcaption><b>Garis mendatar</b>kereta pulang ke rumah</figcaption></figure></button>
+<button class="pg" type="button" data-cap="Lengkung ke bawah: siput merayap ke bunga"><figure><img src="images/intip/pra-13.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Lengkung ke bawah: siput merayap ke bunga"><figcaption><b>Lengkung ke bawah</b>siput merayap ke bunga</figcaption></figure></button>
+<button class="pg" type="button" data-cap="Lingkaran: lingkari apel, matahari, dan bulan"><figure><img src="images/intip/pra-21.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Lingkaran: lingkari apel, matahari, dan bulan"><figcaption><b>Lingkaran</b>lingkari apel, matahari, dan bulan</figcaption></figure></button>
+      </div>
+    </div>
+    <div class="panel" role="tabpanel" id="pn-cal" aria-labelledby="tab-cal" hidden>
+      <div class="panel-head">
+        <p><strong>Calistung</strong> · Level 2 dan 3 · 99 halaman<br>Satu huruf bergambar sehari, lalu angka dan suku kata sampai membaca kalimat pendek. Tiap lembar punya tiga langkah: lihat, tebalkan, tulis sendiri.</p>
+        <a class="btn primary small" href="https://lynk.id/riezkygroup/j68l4xrxqyed" target="_blank" rel="noopener">Beli Calistung · Rp 29.000</a>
+      </div>
+      <div class="pages" tabindex="0" aria-label="Contoh halaman Calistung">
+<button class="pg" type="button" data-cap="Huruf A a: lihat, tebalkan, tulis sendiri"><figure><img src="images/intip/cal-7.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Huruf A a: lihat, tebalkan, tulis sendiri"><figcaption><b>Huruf A a</b>lihat, tebalkan, tulis sendiri</figcaption></figure></button>
+<button class="pg" type="button" data-cap="Angka 2 dan 3: hitung gambar, lingkari, tulis angka"><figure><img src="images/intip/cal-51.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Angka 2 dan 3: hitung gambar, lingkari, tulis angka"><figcaption><b>Angka 2 dan 3</b>hitung gambar, lingkari, tulis angka</figcaption></figure></button>
+<button class="pg" type="button" data-cap="Membaca kata: bebek, kuda, sapi"><figure><img src="images/intip/cal-82.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Membaca kata: bebek, kuda, sapi"><figcaption><b>Membaca kata</b>bebek, kuda, sapi</figcaption></figure></button>
+      </div>
+    </div>
+    <div class="panel" role="tabpanel" id="pn-hij" aria-labelledby="tab-hij" hidden>
+      <div class="panel-head">
+        <p><strong>Hijaiyah</strong> · Pengenalan · 99 halaman<br>Setiap tulisan Arab disertai cara baca Latin dan artinya, jadi orang tua yang belum lancar pun bisa mendampingi. Pengenalan huruf, bukan pengganti guru mengaji.</p>
+        <a class="btn primary small" href="https://lynk.id/riezkygroup/dm8j51r3wp5z" target="_blank" rel="noopener">Beli Hijaiyah · Rp 39.000</a>
+      </div>
+      <div class="pages" tabindex="0" aria-label="Contoh halaman Hijaiyah">
+<button class="pg" type="button" data-cap="Cara membaca Latin: tiap bunyi ada penjelasannya"><figure><img src="images/intip/hij-3.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Cara membaca Latin: tiap bunyi ada penjelasannya"><figcaption><b>Cara membaca Latin</b>tiap bunyi ada penjelasannya</figcaption></figure></button>
+<button class="pg" type="button" data-cap="Kenali huruf Alif: bunyi, kata pertama, tebalkan"><figure><img src="images/intip/hij-6.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Kenali huruf Alif: bunyi, kata pertama, tebalkan"><figcaption><b>Kenali huruf Alif</b>bunyi, kata pertama, tebalkan</figcaption></figure></button>
+<button class="pg" type="button" data-cap="Menulis huruf Alif: tebalkan lalu tulis sendiri"><figure><img src="images/intip/hij-7.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Menulis huruf Alif: tebalkan lalu tulis sendiri"><figcaption><b>Menulis huruf Alif</b>tebalkan lalu tulis sendiri</figcaption></figure></button>
+      </div>
+    </div>
+    <div class="panel" role="tabpanel" id="pn-pet" aria-labelledby="tab-pet" hidden>
+      <div class="panel-head">
+        <p><strong>Petualangan</strong> · Logika dan motorik · 71 halaman<br>Enam dunia petualangan, satu tangga per hari: labirin, jejak garis, pola, hubungkan titik, sudoku bentuk, dan cermin ajaib. Melatih fokus tanpa layar.</p>
+        <a class="btn primary small" href="https://lynk.id/riezkygroup/xpmzn44k5ypd" target="_blank" rel="noopener">Beli Petualangan · Rp 49.000</a>
+      </div>
+      <div class="pages" tabindex="0" aria-label="Contoh halaman Petualangan">
+<button class="pg" type="button" data-cap="Tangga ke-1: bantu si kecil menemukan jalan"><figure><img src="images/intip/pet-4.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Tangga ke-1: bantu si kecil menemukan jalan"><figcaption><b>Tangga ke-1</b>bantu si kecil menemukan jalan</figcaption></figure></button>
+<button class="pg" type="button" data-cap="Tangga ke-6: sudoku bentuk"><figure><img src="images/intip/pet-9.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Tangga ke-6: sudoku bentuk"><figcaption><b>Tangga ke-6</b>sudoku bentuk</figcaption></figure></button>
+<button class="pg" type="button" data-cap="Tangga ke-7: cermin ajaib: gambar sisi lainnya"><figure><img src="images/intip/pet-10.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Tangga ke-7: cermin ajaib: gambar sisi lainnya"><figcaption><b>Tangga ke-7</b>cermin ajaib: gambar sisi lainnya</figcaption></figure></button>
+      </div>
+    </div>
+    <div class="panel" role="tabpanel" id="pn-kit" aria-labelledby="tab-kit" hidden>
+      <div class="panel-head">
+        <p><strong>Kit Rutinitas</strong> · Pagi sampai malam · 35 halaman<br>Papan kegiatan yang bisa ditempeli kartu gambar. Anak melihat urutan harinya sendiri, jadi pagi tidak perlu diulang-ulang dengan perintah.</p>
+        <a class="btn primary small" href="https://lynk.id/riezkygroup/j37yrqd033k9" target="_blank" rel="noopener">Beli Kit Rutinitas · Rp 19.000</a>
+      </div>
+      <div class="pages" tabindex="0" aria-label="Contoh halaman Kit Rutinitas">
+<button class="pg" type="button" data-cap="Papan pagi: dari bangun tidur sampai berangkat"><figure><img src="images/intip/kit-6.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Papan pagi: dari bangun tidur sampai berangkat"><figcaption><b>Papan pagi</b>dari bangun tidur sampai berangkat</figcaption></figure></button>
+<button class="pg" type="button" data-cap="Kartu kegiatan: gunting dan tempel di papan"><figure><img src="images/intip/kit-12.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Kartu kegiatan: gunting dan tempel di papan"><figcaption><b>Kartu kegiatan</b>gunting dan tempel di papan</figcaption></figure></button>
+<button class="pg" type="button" data-cap="Tangga Hebat: satu kegiatan selesai, naik satu anak tangga"><figure><img src="images/intip/kit-10.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Tangga Hebat: satu kegiatan selesai, naik satu anak tangga"><figcaption><b>Tangga Hebat</b>satu kegiatan selesai, naik satu anak tangga</figcaption></figure></button>
+      </div>
+    </div>
+    <div class="panel" role="tabpanel" id="pn-grt" aria-labelledby="tab-grt" hidden>
+      <div class="panel-head">
+        <p><strong>Gratis</strong> · Mulai di sini · 11 halaman<br>Contoh dari tiap level plus Tes 2 Menit untuk tahu anak cocok mulai dari mana. Cetak dan coba dulu sebelum membeli apa pun.</p>
+        <a class="btn primary small" href="https://lynk.id/riezkygroup/gl8e6x0l6ozk" target="_blank" rel="noopener">Ambil gratis</a>
+      </div>
+      <div class="pages" tabindex="0" aria-label="Contoh halaman Gratis">
+<button class="pg" type="button" data-cap="Tes 2 Menit: mulai dari level mana?"><figure><img src="images/intip/grt-2.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Tes 2 Menit: mulai dari level mana?"><figcaption><b>Tes 2 Menit</b>mulai dari level mana?</figcaption></figure></button>
+<button class="pg" type="button" data-cap="Zigzag dan gelombang: contoh lembar Level 1"><figure><img src="images/intip/grt-5.webp" width="662" height="936" loading="lazy" alt="Contoh halaman Zigzag dan gelombang: contoh lembar Level 1"><figcaption><b>Zigzag dan gelombang</b>contoh lembar Level 1</figcaption></figure></button>
+      </div>
+    </div>
+    <p class="hint">Contoh ditampilkan dengan kolom nama dan tanggal kosong, persis seperti saat dicetak.</p>
+  </div>
+</section>
+
+<dialog class="lb" id="lb" aria-label="Pratinjau halaman">
+  <div class="lb-in">
+    <img class="lb-img" id="lb-img" alt="">
+    <div class="lb-bar"><button class="lb-btn" id="lb-prev" aria-label="Halaman sebelumnya">←</button><span id="lb-cap"></span><button class="lb-btn" id="lb-next" aria-label="Halaman berikutnya">→</button></div>
+    <button class="lb-btn lb-close" id="lb-close" aria-label="Tutup">✕</button>
+  </div>
+</dialog>
+
+<section class="section" id="produk">
+  <div class="wrap">
+    <div class="head">
+      <h2>Pilih paket atau satuan.</h2>
+      <p class="lede-2">Semua berupa PDF A4 yang langsung diunduh setelah bayar, dan boleh dicetak berulang untuk keluarga sendiri.</p>
+    </div>
+    <div class="bento">
+      <article class="tile best t12" id="p-paket">
+        <span class="ribbon">Paling lengkap</span>
+        <img src="images/produk/lengkap.webp" width="640" height="640" loading="lazy" alt="Sampul Paket Lengkap Anak Tangga Q">
+        <div class="body">
+          <span class="tag">Paket Lengkap · 350 halaman</span>
+          <h3>Semua level, satu paket</h3>
+          <p class="desc">Lima produk sekaligus: Pra-Menulis, Tangga Calistung 30 Hari, Tangga Hijaiyah, Petualangan Tangga 60 Hari, dan Kit Rutinitas Si Kecil.</p>
+          <ul class="checks"><li>Dari tarik garis sampai baca dan tulis kata</li><li>Plus hijaiyah, logika, dan rutinitas harian</li><li>Hemat Rp 52.000 dibanding beli satu per satu</li></ul>
+          <div class="buy"><div class="price"><s>Rp 151.000</s><b>Rp 99.000</b></div><a class="btn" href="https://lynk.id/riezkygroup/we952xv50ke8" target="_blank" rel="noopener">Ambil Paket Lengkap</a></div>
+        </div>
+      </article>
+      <article class="tile t6 row c-mint">
+        <img src="images/produk/mulai-dari-nol.webp" width="640" height="640" loading="lazy" alt="Sampul Paket Mulai dari Nol">
+        <div class="body"><span class="tag">Paket · 145 halaman</span><h3>Paket Mulai dari Nol</h3><p class="meta">Level 1 ke Level 2</p><p class="desc">Pra-Menulis dan Calistung dalam satu paket. Hemat Rp 9.000 dibanding beli terpisah.</p><div class="buy"><div class="price"><s>Rp 44.000</s><b>Rp 35.000</b></div><a class="btn small" href="https://lynk.id/riezkygroup/el872722048g" target="_blank" rel="noopener">Ambil paket</a></div></div>
+      </article>
+      <article class="tile t6 row c-sky">
+        <img src="images/produk/siap-baca.webp" width="640" height="640" loading="lazy" alt="Sampul Paket Siap Baca">
+        <div class="body"><span class="tag">Paket · 199 halaman</span><h3>Paket Siap Baca</h3><p class="meta">Level 2 dan 3</p><p class="desc">Calistung dan Hijaiyah dalam satu paket. Hemat Rp 13.000 dibanding beli terpisah.</p><div class="buy"><div class="price"><s>Rp 68.000</s><b>Rp 55.000</b></div><a class="btn small" href="https://lynk.id/riezkygroup/yvz4n615renz" target="_blank" rel="noopener">Ambil paket</a></div></div>
+      </article>
+      <article id="p-pramenulis" class="tile t4 c-orange">
+        <img src="images/produk/pra-menulis.webp" width="640" height="640" loading="lazy" alt="Sampul Pra-Menulis Latihan Tarik Garis">
+        <div class="body"><span class="tag">Level 1 · 45 halaman</span><h3>Pra-Menulis</h3><p class="meta">Latihan tarik garis</p><p class="desc">Lima tahap pelan-pelan: garis lurus, lengkung dan zigzag, lingkaran, silang dan bentuk, lalu jalan dan gabungan.</p><div class="buy"><div class="price"><b>Rp 15.000</b></div><a class="btn small" href="https://lynk.id/riezkygroup/08l56n5mw78l" target="_blank" rel="noopener">Lihat produk</a></div></div>
+      </article>
+      <article id="p-calistung" class="tile t4 c-sun">
+        <img src="images/produk/calistung.webp" width="640" height="640" loading="lazy" alt="Sampul Tangga Calistung 30 Hari">
+        <div class="body"><span class="tag">Level 2 dan 3 · 99 halaman</span><h3>Tangga Calistung</h3><p class="meta">Baca, tulis, hitung</p><p class="desc">Huruf A–Z bergambar, angka, dan suku kata. Jalur Santai (1 halaman sehari) atau Normal (3 halaman sehari), plus halaman "Mulai dari Mana?".</p><div class="buy"><div class="price"><s>Rp 59.000</s><b>Rp 29.000</b></div><a class="btn small" href="https://lynk.id/riezkygroup/j68l4xrxqyed" target="_blank" rel="noopener">Lihat produk</a></div></div>
+      </article>
+      <article id="p-hijaiyah" class="tile t4 c-mint">
+        <img src="images/produk/hijaiyah.webp" width="640" height="640" loading="lazy" alt="Sampul Tangga Hijaiyah">
+        <div class="body"><span class="tag">Hijaiyah · 99 halaman</span><h3>Tangga Hijaiyah</h3><p class="meta">Kenalan huruf hijaiyah</p><p class="desc">28 huruf, tiap huruf 3 halaman. Semua tulisan Arab ada cara baca Latin dan artinya, plus doa pendek dan sertifikat.</p><p class="note">Untuk pengenalan dan pendamping orang tua, bukan pengganti guru mengaji.</p><div class="buy"><div class="price"><b>Rp 39.000</b></div><a class="btn small" href="https://lynk.id/riezkygroup/dm8j51r3wp5z" target="_blank" rel="noopener">Lihat produk</a></div></div>
+      </article>
+      <article id="p-petualangan" class="tile t6 row c-violet">
+        <img src="images/produk/petualangan.webp" width="640" height="640" loading="lazy" alt="Sampul Petualangan Tangga 60 Hari">
+        <div class="body"><span class="tag">Logika · 71 halaman</span><h3>Petualangan Tangga 60 Hari</h3><p class="meta">Logika dan motorik</p><p class="desc">6 dunia petualangan: labirin, jejak garis, pola, hubungkan titik, sudoku bentuk, dan cermin ajaib.</p><div class="buy"><div class="price"><s>Rp 99.000</s><b>Rp 49.000</b></div><a class="btn small" href="https://lynk.id/riezkygroup/xpmzn44k5ypd" target="_blank" rel="noopener">Lihat produk</a></div></div>
+      </article>
+      <article id="p-rutinitas" class="tile t6 row c-pink">
+        <img src="images/produk/kit-rutinitas.webp" width="640" height="640" loading="lazy" alt="Sampul Kit Rutinitas Si Kecil">
+        <div class="body"><span class="tag">Rutinitas · 35 halaman</span><h3>Kit Rutinitas Si Kecil</h3><p class="meta">Papan dan kartu kegiatan</p><p class="desc">Papan pagi, siang, malam, 30 kartu kegiatan, Tangga Hebat, kartu perasaan, dan pelacak 30 hari.</p><div class="buy"><div class="price"><b>Rp 19.000</b></div><a class="btn small" href="https://lynk.id/riezkygroup/j37yrqd033k9" target="_blank" rel="noopener">Lihat produk</a></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section paper-2" id="cara">
+  <div class="wrap">
+    <div class="head"><h2>Tiga langkah. Selesai.</h2></div>
     <ol class="steps">
-      <li><span class="num">1</span><div><h3>Ambil</h3><p>Mulai dari 10 lembar gratis, lalu pilih program sesuai usia anak.</p></div></li>
-      <li><span class="num">2</span><div><h3>Download &amp; cetak</h3><p>File PDF A4 langsung bisa diunduh dari Member Area Lynk.id setelah bayar. Cetak di rumah atau percetakan.</p></div></li>
-      <li><span class="num">3</span><div><h3>Satu lembar sehari</h3><p>Cukup 10–15 menit. Tunjukkan sekali, lalu biarkan anak yang mencoba. Berhenti sebelum ia bosan.</p></div></li>
+      <li><span class="num">1</span><h3>Ambil</h3><p>Mulai dari 10 lembar gratis. Tes 2 menit di dalamnya menunjukkan anak cocok mulai dari Level 1, 2, atau 3.</p></li>
+      <li><span class="num">2</span><h3>Download dan cetak</h3><p>PDF A4 langsung bisa diunduh dari Member Area Lynk.id setelah bayar. Cetak di rumah atau percetakan.</p></li>
+      <li><span class="num">3</span><h3>Satu lembar sehari</h3><p>Cukup 10–15 menit. Tunjukkan sekali, lalu biarkan anak yang mencoba. Berhenti sebelum ia bosan.</p></li>
     </ol>
   </div>
 </section>
-<section class="section gamebanner" id="game">
+
+<section class="section game" id="game">
   <div class="wrap game-in">
     <div>
-      <p class="kicker">Baru · Game belajar</p>
       <h2>Naik tangga sambil bermain.</h2>
-      <p>Game calistung, hijaiyah, dan logika untuk anak 3–6 tahun. Setiap hari satu anak tangga: tebak huruf, tebalkan huruf dengan jari, kenal harakat, labirin, kartu ingatan, sampai membaca kata pertama.</p>
+      <p class="lede-2" style="color:#fff">Game calistung, hijaiyah, dan logika. Setiap hari satu anak tangga: tebak huruf, tebalkan dengan jari, kenal harakat, labirin, sampai membaca kata pertama.</p>
       <ul class="checks">
         <li>Tangga harian: Calistung 30 hari, Hijaiyah 30 hari, Petualangan 60 hari</li>
         <li>Taman Latihan: 7 keterampilan, 84 level yang makin menantang</li>
-        <li>Papan rutinitas pagi &amp; malam, stiker koleksi, dan sertifikat cetak</li>
+        <li>Papan rutinitas, stiker koleksi, dan sertifikat cetak</li>
         <li>Tanpa iklan, tanpa akun, bisa dimainkan offline</li>
       </ul>
-      <a class="btn btn-light" href="game/index.html">Coba main gratis ▶</a>
+      <a class="btn primary" href="game/index.html">Coba main gratis</a>
       <p class="micro">3 hari pertama tiap tangga dan 3 level pertama tiap latihan gratis. Sisanya dibuka dengan kode dari pembelian.</p>
     </div>
-    <div class="game-art" aria-hidden="true">
-      <div class="gstep g1"><span>🔤</span></div><div class="gstep g2"><span>🕌</span></div><div class="gstep g3"><span>🧩</span></div><div class="gstep g4"><span>🏅</span></div>
-    </div>
+    <div class="gstairs" aria-hidden="true"><div>🔤</div><div>🕌</div><div>🧩</div><div>🏅</div></div>
   </div>
 </section>
 
-<section class="section gratis" id="gratis">
-  <div class="wrap cta-box">
+<section class="section free" id="gratis">
+  <div class="wrap free-in">
     <div>
-      <p class="kicker">Mulai dari sini</p>
       <h2>Coba dulu, tanpa biaya.</h2>
-      <p>Dua contoh gratis untuk anak 3–6 tahun, supaya kamu bisa melihat cocok atau tidak sebelum membeli versi lengkapnya.</p>
+      <p class="lede-2" style="color:var(--ink)">Dua contoh gratis supaya kamu bisa melihat cocok atau tidak sebelum membeli versi lengkapnya.</p>
       <ul class="checks">
-        <li><b>10 Lembar Calistung:</b> huruf A, I, U, angka 1–3, suku kata ba-bi-bu, penjumlahan bergambar, dan Peta Tangga-ku</li>
-        <li><b>Hijaiyah 3 Huruf:</b> Alif, Ba, Ta, 18 halaman berisi kenali huruf, menebal, kata contoh, harakat, dan permainan</li>
+        <li><b>10 Lembar Gratis (11 halaman):</b> Tes 2 Menit untuk tahu mulai dari level mana, lalu contoh lembar tiap level: garis, huruf A dan B, suku kata, dan angka</li>
+        <li><b>Hijaiyah 3 Huruf (14 halaman):</b> Alif, Ba, Ta dengan cara baca Latin dan artinya, menulis, harakat, dan permainan</li>
       </ul>
-      <div class="btn-row"><a class="btn btn-primary" href="https://lynk.id/riezkygroup/gl8e6x0l6ozk" target="_blank" rel="noopener">Ambil 10 lembar Calistung</a><a class="btn btn-ghost" href="https://lynk.id/riezkygroup/p17rgm188od2" target="_blank" rel="noopener">Coba Hijaiyah 3 huruf</a></div>
-      <p class="micro">Gratis, diunduh lewat Member Area Lynk.id. Link menuju toko resmi kami.</p>
+      <div class="actions"><a class="btn dark" href="https://lynk.id/riezkygroup/gl8e6x0l6ozk" target="_blank" rel="noopener">Ambil 10 Lembar Gratis</a><a class="btn" href="https://lynk.id/riezkygroup/p17rgm188od2" target="_blank" rel="noopener">Coba Hijaiyah 3 huruf</a></div>
+      <p class="micro">Gratis, diunduh lewat Member Area Lynk.id.</p>
     </div>
-    <div class="paper" aria-hidden="true">
-      <div class="paper-top"><span class="paper-tag badge">PLAY</span><b>Aktivitas Pertamaku</b></div>
-      <div class="paper-lines"><i></i><i></i><i></i><i></i><i></i></div>
-      <div class="paper-shape"><span></span><span></span><span></span></div>
-      <div class="paper-foot">anaktanggaq.com · 01</div>
+    <div class="fan" aria-hidden="true">
+      <img src="images/intip/grt-2.webp" width="662" height="936" loading="lazy" alt="">
+      <img src="images/intip/grt-5.webp" width="662" height="936" loading="lazy" alt="">
+      <img class="cover" src="images/produk/gratis.webp" width="640" height="640" loading="lazy" alt="">
     </div>
-  </div>
-</section>
-<section class="section" id="tentang">
-  <div class="wrap narrow">
-    <p class="kicker">Tentang kami</p>
-    <h2>Dibuat oleh orang tua yang pernah salah.</h2>
-    <p class="story">Dulu aku memaksa anakku belajar. Hasilnya dia menangis, dan aku merasa gagal. Sampai aku coba satu hal: satu lembar, sepuluh menit, dan dia yang memilih. Sejak itu dia minta sendiri.</p>
-    <p class="story">Anak Tangga Q lahir dari situ. Kami bukan psikolog dan bukan dokter. Kami orang tua yang belajar pelan-pelan, lalu merapikan semua lembar itu supaya bisa dipakai keluarga lain hari itu juga.</p>
-    <div class="values">
-      <div><b>Satu langkah</b><span>Satu produk, satu tujuan.</span></div>
-      <div><b>Tanpa paksaan</b><span>Ganti caranya, bukan tambah tekanan.</span></div>
-      <div><b>Pakai hari ini</b><span>Download, cetak, mulai.</span></div>
-    </div>
-  </div>
-</section>
-<section class="section cream" id="lini">
-  <div class="wrap">
-    <p class="kicker">Yang sedang kami bangun</p>
-    <h2>Satu rumah, banyak format.</h2>
-    <p class="section-lede">Saat ini fokus kami lembar kerja (PLAY). Format lain menyusul pelan-pelan, dengan nama brand yang sama.</p>
-    <div class="grid3">
-      <article class="line-card">
-        <span class="ico" aria-hidden="true">✏️</span><span class="badge">PLAY</span>
-        <h3>Mulai dari tangan</h3>
-        <p>Lembar aktivitas, latihan garis, angka, dan huruf. Cetak, lalu mulai.</p>
-        <span class="age">Usia 2–6 tahun</span>
-      </article>
-      <article class="line-card">
-        <span class="ico" aria-hidden="true">🎬</span><span class="badge">WATCH</span>
-        <h3>Mulai dari lihat</h3>
-        <p>Video pendek dan mini course. Orang tua menonton dulu, lalu memainkan bersama.</p>
-        <span class="age">Usia 2–6 tahun</span>
-      </article>
-      <article class="line-card">
-        <span class="ico" aria-hidden="true">📖</span><span class="badge">READ</span>
-        <h3>Mulai dari cerita</h3>
-        <p>Buku digital dan ebook panduan yang bisa dibaca di layar atau dicetak.</p>
-        <span class="age">Usia 2–6 tahun</span>
-      </article>
-      <article class="line-card">
-        <span class="ico" aria-hidden="true">💬</span><span class="badge">CLASS</span>
-        <h3>Mulai dari tanya</h3>
-        <p>Webinar untuk orang tua, dengan sesi tanya jawab dan rekaman yang bisa diulang.</p>
-        <span class="age">Usia 5–6 tahun</span>
-      </article>
-      <article class="line-card">
-        <span class="ico" aria-hidden="true">🎮</span><span class="badge">APP</span>
-        <h3>Mulai dari main</h3>
-        <p>Aplikasi dan game edukasi ringan, untuk menemani latihan tanpa layar berlebih.</p>
-        <span class="age">Usia 3–8 tahun</span>
-      </article>
-      <article class="line-card">
-        <span class="ico" aria-hidden="true">🧩</span><span class="badge">KIT</span>
-        <h3>Mulai dari benda</h3>
-        <p>Alat peraga dan mainan edukatif yang bisa dipegang, dipindah, dan dicoba.</p>
-        <span class="age">Usia 3–8 tahun</span>
-      </article>
-    </div>
-  </div>
-</section>
-<section class="section" id="faq">
-  <div class="wrap narrow">
-    <p class="kicker">Pertanyaan umum</p>
-    <h2>Yang sering ditanyakan.</h2>
-    <details><summary>Apakah harus mencetak semua halaman?</summary><p>Tidak. Cetak lima halaman dulu. Kalau anak masih mau, baru tambah. Rutinitas kecil lebih penting daripada tumpukan kertas.</p></details>
-      <details><summary>Bedanya Paket Lengkap dan Paket Hemat?</summary><p>Paket Lengkap berisi Calistung, Hijaiyah, dan Petualangan (251 halaman, Rp 99.000). Paket Hemat berisi Calistung dan Petualangan saja (106 halaman, Rp 69.000). Kit Rutinitas dijual terpisah.</p></details>
-    <details><summary>Bagaimana cara menerima filenya?</summary><p>Setelah bayar, file PDF langsung bisa diunduh dari Member Area Lynk.id. Untuk yang gratis, tidak ada biaya sama sekali.</p></details>
-    <details><summary>Bisa dipakai untuk lebih dari satu anak?</summary><p>Bisa, untuk anak dalam satu keluarga. File bisa dicetak ulang kapan saja.</p></details>
-    <details><summary>Apakah ini menggantikan terapi atau pemeriksaan profesional?</summary><p>Tidak. Produk kami mendukung latihan sehari-hari, bukan menggantikan penanganan profesional.</p></details>
-    <details><summary>Bagaimana kalau anak tetap menolak?</summary><p>Coba ganti alat atau tempatnya. Krayon jadi spidol, meja jadi lantai. Kalau masih menolak, berhenti dulu dan coba lagi besok.</p></details>
   </div>
 </section>
 
-<section class="section close">
-  <div class="wrap cta-box close-box">
+<section class="section" id="tentang">
+  <div class="wrap about-in">
+    <h2>Dibuat oleh orang tua yang pernah salah.</h2>
     <div>
-      <p class="kicker">Mulai hari ini</p>
-      <h2>Satu anak tangga saja.</h2>
-      <p>Cetak satu lembar. Coba 10–15 menit. Lihat reaksinya. Kalau cocok, lanjut. Kalau belum, tidak apa-apa.</p>
+      <div class="story">
+        <p>Dulu aku memaksa anakku belajar. Hasilnya dia menangis, dan aku merasa gagal. Sampai aku coba satu hal: satu lembar, sepuluh menit, dan dia yang memilih. Sejak itu dia minta sendiri.</p>
+        <p>Anak Tangga Q lahir dari situ. Kami bukan psikolog dan bukan dokter. Kami orang tua yang belajar pelan-pelan, lalu merapikan semua lembar itu supaya bisa dipakai keluarga lain hari itu juga.</p>
+      </div>
+      <div class="values">
+        <div><b>Satu langkah</b><span>Satu produk, satu tujuan.</span></div>
+        <div><b>Tanpa paksaan</b><span>Ganti caranya, bukan tambah tekanan.</span></div>
+        <div><b>Pakai hari ini</b><span>Download, cetak, mulai.</span></div>
+      </div>
     </div>
-    <a class="btn btn-light" href="https://lynk.id/riezkygroup" target="_blank" rel="noopener">Kunjungi toko kami</a>
+  </div>
+</section>
+
+<section class="section paper-2" id="lini">
+  <div class="wrap">
+    <div class="head"><h2>Satu rumah, banyak format.</h2><p class="lede-2">Saat ini fokus kami lembar kerja. Format lain menyusul pelan-pelan, dengan nama yang sama.</p></div>
+    <div class="lini">
+      <article class="now-on"><div class="top"><span class="ico" aria-hidden="true">✏️</span><span class="tag">PLAY</span></div><h3>Mulai dari tangan</h3><p>Lembar aktivitas, latihan garis, angka, dan huruf. Cetak, lalu mulai.</p><span class="st">Sudah tersedia</span></article>
+      <article><div class="top"><span class="ico" aria-hidden="true">🎬</span><span class="tag">WATCH</span></div><h3>Mulai dari lihat</h3><p>Video pendek dan mini course. Orang tua menonton dulu, lalu memainkan bersama.</p><span class="st">Menyusul</span></article>
+      <article><div class="top"><span class="ico" aria-hidden="true">📖</span><span class="tag">READ</span></div><h3>Mulai dari cerita</h3><p>Buku digital dan ebook panduan yang bisa dibaca di layar atau dicetak.</p><span class="st">Menyusul</span></article>
+      <article><div class="top"><span class="ico" aria-hidden="true">💬</span><span class="tag">CLASS</span></div><h3>Mulai dari tanya</h3><p>Webinar untuk orang tua, dengan tanya jawab dan rekaman yang bisa diulang.</p><span class="st">Menyusul</span></article>
+      <article><div class="top"><span class="ico" aria-hidden="true">🎮</span><span class="tag">APP</span></div><h3>Mulai dari main</h3><p>Aplikasi dan game edukasi ringan untuk menemani latihan tanpa layar berlebih.</p><span class="st">Menyusul</span></article>
+      <article><div class="top"><span class="ico" aria-hidden="true">🧩</span><span class="tag">KIT</span></div><h3>Mulai dari benda</h3><p>Alat peraga dan mainan edukatif yang bisa dipegang, dipindah, dan dicoba.</p><span class="st">Menyusul</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="head"><h2>Yang sering ditanyakan.</h2></div>
+    <div class="faq-list">
+      <details><summary>Apakah harus mencetak semua halaman?</summary><p>Tidak. Cetak lima halaman dulu. Kalau anak masih mau, baru tambah. Rutinitas kecil lebih penting daripada tumpukan kertas.</p></details>
+      <details><summary>Anak saya belum bisa menulis. Mulai dari mana?</summary><p>Itu wajar, tiap anak punya kecepatan sendiri. Mulai dari Level 1 (Pra-Menulis), atau ambil 10 Lembar Gratis dan lakukan Tes 2 Menit di lembar pertama. Naik ke level berikutnya kalau anak sudah siap.</p></details>
+      <details><summary>Cocok untuk anak umur berapa?</summary><p>Kami sengaja tidak memakai patokan umur. Anak seumur sama bisa sangat berbeda kesiapannya. Pilih dari tiga level: Level 1 baru belajar tarik garis, Level 2 sudah kenal huruf, Level 3 mulai baca dan tulis kata.</p></details>
+      <details><summary>Apa bedanya paket-paketnya?</summary><p>Paket Lengkap berisi 5 produk, 350 halaman, Rp 99.000. Paket Siap Baca berisi Calistung dan Hijaiyah, 199 halaman, Rp 55.000. Paket Mulai dari Nol berisi Pra-Menulis dan Calistung, 145 halaman, Rp 35.000.</p></details>
+      <details><summary>Bagaimana cara menerima filenya?</summary><p>Setelah bayar, file PDF langsung bisa diunduh dari Member Area Lynk.id. Untuk yang gratis, tidak ada biaya sama sekali.</p></details>
+      <details><summary>Bisa dipakai untuk lebih dari satu anak?</summary><p>Bisa, untuk anak dalam satu keluarga. File bisa dicetak ulang kapan saja.</p></details>
+      <details><summary>Apakah ini menggantikan terapi atau pemeriksaan profesional?</summary><p>Tidak. Produk kami mendukung latihan sehari-hari, bukan menggantikan penanganan profesional.</p></details>
+      <details><summary>Bagaimana kalau anak tetap menolak?</summary><p>Coba ganti alat atau tempatnya. Krayon jadi spidol, meja jadi lantai. Kalau masih menolak, berhenti dulu dan coba lagi besok.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="close-box">
+      <div><h2>Satu anak tangga saja.</h2><p>Cetak satu lembar. Coba 10–15 menit. Lihat reaksinya. Kalau cocok, lanjut. Kalau belum, tidak apa-apa.</p></div>
+      <a class="btn dark" href="https://lynk.id/riezkygroup" target="_blank" rel="noopener">Kunjungi toko kami</a>
+    </div>
   </div>
 </section>
 
@@ -291,10 +336,8 @@
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <div>
-      <b>Anak Tangga Q</b>
-      <p>Satu anak tangga sehari.</p>
-    </div>
+    <b>Anak Tangga Q</b>
+    <p>Satu anak tangga sehari.</p>
     <nav aria-label="Tautan">
       <a href="https://lynk.id/riezkygroup" target="_blank" rel="noopener">Toko lynk.id</a>
       <a href="https://www.tiktok.com/@anaktanggaq" target="_blank" rel="noopener">TikTok</a>
@@ -307,8 +350,8 @@
 </footer>
 
 <div class="sticky-cta">
-  <div class="sticky-info"><b>Paket Lengkap 251 hlm</b><span>Rp 99.000 · hemat Rp 18.000</span></div>
-  <a href="https://lynk.id/riezkygroup/we952xv50ke8" target="_blank" rel="noopener">Ambil Paket</a>
+  <div class="sticky-info"><b>Paket Lengkap 350 hlm</b><span>Rp 99.000 · hemat Rp 52.000</span></div>
+  <a href="https://lynk.id/riezkygroup/we952xv50ke8" target="_blank" rel="noopener">Ambil paket</a>
 </div>
 
 <script src="script.js"></script>
