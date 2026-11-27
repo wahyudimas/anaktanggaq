@@ -14,7 +14,7 @@ Situs statis satu halaman untuk Anak Tangga Q.
 Situs ini di-deploy ke GitHub Pages:
 
 ```
-https://wahyudimas.github.io/anaktanggaq/
+https://anaktanggaq.pages.dev/
 ```
 
 Untuk memperbarui:
